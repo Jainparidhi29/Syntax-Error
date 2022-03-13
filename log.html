@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>
+login form design 
+</title>
+    <link rel="stylesheet" href="s.css">
+</head>
+
+<body>
+    <div class="loginbox">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()" style="color: azure">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()" style="color: azure">Register</button>
+                
+            </div>
+        
+            <div class="social-icons">
+                <img src="2021_Facebook_icon.svg.png">
+                <img src="instagram-1581266_1280.jpg">
+                <img src="Twitter-Logo.png">
+            </div>
+            <form id="login" class="input-group" action="dash.html">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                <button type="submit" class="submit-btn" onclick="onClickFn()">Log In</button>
+            </form>
+            <form id="register" class="input-group" action="dashboard.html">
+                <input type="text" class="input-field" placeholder="User Id" required>
+                <input type="email" class="input-field" placeholder="Email Id" required>
+                <input type="text" class="input-field" placeholder="Enter Password" required>
+                <input type="checkbox" class="checkbox"><span>I agree to the terms and conditions </span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("register");
+    var z=document.getElementById("btn");
+    function register(){
+        x.style.left="-400px";
+        y.style.left="50px";
+        z.style.left="110px";
+    }
+    function login(){
+        x.style.left="50px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+    </script>
+    
+    <script>
+        function onClickFn(){
+            document.location.href="dashboard.html"
+        }
+    </script>
+</body>
+ 
+</html>
